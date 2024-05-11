@@ -4,9 +4,9 @@ import 'package:get/get.dart';
 
 class AppTextField extends StatelessWidget {
   const AppTextField({
-    super.key,
+    super.key, this.hint,
   });
-
+  final String? hint;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -23,6 +23,8 @@ class AppTextField extends StatelessWidget {
             ),
             child: const Icon(Icons.search),
           ),
+          hintText: hint,
+          hintStyle: context.textTheme.bodySmall,
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(defaultRadius),
               borderSide: BorderSide.none

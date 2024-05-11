@@ -1,8 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_admin_panel/core/resources/constants.dart';
 import 'package:flutter_admin_panel/core/widgets/app_text_fields.dart';
 import 'package:flutter_admin_panel/modules/main/widgets/drawer_widget.dart';
+import 'package:flutter_admin_panel/modules/main/widgets/main_page_header_widget.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 
@@ -25,16 +26,7 @@ class MainPage extends StatelessWidget {
                   child: Column(
                     children: [
                       // Header
-                      Row(
-                        children: [
-                          // title
-                          Text("پنل مدیریت فروشگاه",style: context.textTheme.titleMedium),
-                          const Spacer(),
-                          Expanded(
-                            child: AppTextField(),
-                          )
-                        ],
-                      ),
+                      const MainPageHeader(),
                       Container(
                         decoration: BoxDecoration(
                             color: context.theme.colorScheme.secondary,
@@ -51,6 +43,8 @@ class MainPage extends StatelessWidget {
     );
   }
 }
+
+
 
 
 
