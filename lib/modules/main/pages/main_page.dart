@@ -4,6 +4,7 @@ import 'package:flutter_admin_panel/core/resources/constants.dart';
 import 'package:flutter_admin_panel/core/widgets/app_button_widget.dart';
 import 'package:flutter_admin_panel/modules/main/widgets/add_category_header_widget.dart';
 import 'package:flutter_admin_panel/modules/main/widgets/drawer_widget.dart';
+import 'package:flutter_admin_panel/modules/main/widgets/main_page_category_list_widget.dart';
 import 'package:flutter_admin_panel/modules/main/widgets/main_page_header_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -56,22 +57,7 @@ class MainPage extends StatelessWidget {
                                          // add new category
                                          const AddCategoryHeaderWidget(),
                                          // category list
-                                         Wrap(
-                                           children: List.generate(4, (index) => Column(
-                                             mainAxisSize: MainAxisSize.min,
-                                             children: [
-                                               Container(
-                                                 margin: EdgeInsets.only(top: 18.h,left: 4.w),
-                                                 width: 45.w,
-                                                 height: 160.h,
-                                                 decoration: BoxDecoration(
-                                                   color: context.theme.colorScheme.secondary,
-                                                   borderRadius: BorderRadius.circular(defaultRadius)
-                                                 ),
-                                               ),
-                                             ],
-                                           )),
-                                         ),
+                                         const MainPageCategoryListWidget(),
                                          const SizedBox(height: defaultPadding * 2),
                                         // product list
                                         Expanded(child: Container(
