@@ -11,7 +11,8 @@ class ThemeManager {
     ),
     textTheme:  TextTheme(
       bodyMedium: const TextStyle(fontSize: 14),
-      bodySmall: TextStyle(fontSize: 12,fontWeight: FontWeight.w300)
+      bodySmall: TextStyle(fontSize: 12,fontWeight: FontWeight.w300),
+      titleMedium: TextStyle(fontSize: 24,fontWeight: FontWeight.w700)
     )
   );
 }

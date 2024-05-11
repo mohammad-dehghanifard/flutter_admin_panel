@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_admin_panel/core/resources/assets_path.dart';
 import 'package:flutter_admin_panel/core/resources/constants.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'drawer_item.dart';
@@ -74,6 +75,7 @@ class DrawerWidget extends StatelessWidget {
             const FlutterLogo(
               size: 64,
             ),
+            SizedBox(height: 32.h),
             Column(
               children: List.generate(
                   items.length,

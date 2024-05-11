@@ -19,7 +19,7 @@ class DrawerItem extends StatelessWidget {
         style: context.theme.textTheme.bodySmall,
 
       ),
-      horizontalTitleGap: 0,
+      horizontalTitleGap: 4,
       leading: SvgPicture.asset(
         svgPath,
         height: 16,
