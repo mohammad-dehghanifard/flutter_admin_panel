@@ -34,7 +34,7 @@ class MainPageHeader extends StatelessWidget {
             children: [
               const CircleAvatar(),
               SizedBox(width: 2.w),
-              const Text("محمد دهقانی فرد")
+              const Text("محمد دهقانی فرد",maxLines: 1,overflow: TextOverflow.ellipsis)
             ],
           ),
         )

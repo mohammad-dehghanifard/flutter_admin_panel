@@ -17,6 +17,8 @@ class DrawerItem extends StatelessWidget {
       title:  Text(
         title,
         style: context.theme.textTheme.bodySmall,
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
 
       ),
       horizontalTitleGap: 4,
