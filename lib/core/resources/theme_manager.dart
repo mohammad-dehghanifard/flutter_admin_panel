@@ -9,8 +9,9 @@ class ThemeManager {
       background: darkBgColor,
       secondary: darkSecondaryColor,
     ),
-    textTheme: const TextTheme(
-      bodyMedium: TextStyle(fontSize: 14)
+    textTheme:  TextTheme(
+      bodyMedium: const TextStyle(fontSize: 14),
+      bodySmall: TextStyle(fontSize: 12,fontWeight: FontWeight.w300)
     )
   );
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 class DrawerItem extends StatelessWidget {
   const DrawerItem({
@@ -13,12 +14,16 @@ class DrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       onTap: onTap,
-      title:  Text(title),
-      horizontalTitleGap: 8,
+      title:  Text(
+        title,
+        style: context.theme.textTheme.bodySmall,
+
+      ),
+      horizontalTitleGap: 0,
       leading: SvgPicture.asset(
         svgPath,
         height: 16,
-        colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+        colorFilter: const ColorFilter.mode(Colors.white30, BlendMode.srcIn),
       ),
     );
   }
