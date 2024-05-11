@@ -1,11 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_admin_panel/core/resources/constants.dart';
-import 'package:flutter_admin_panel/core/widgets/app_button_widget.dart';
 import 'package:flutter_admin_panel/modules/main/widgets/add_category_header_widget.dart';
 import 'package:flutter_admin_panel/modules/main/widgets/drawer_widget.dart';
 import 'package:flutter_admin_panel/modules/main/widgets/main_page_category_list_widget.dart';
 import 'package:flutter_admin_panel/modules/main/widgets/main_page_header_widget.dart';
+import 'package:flutter_admin_panel/modules/main/widgets/main_product_list_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
@@ -51,22 +50,16 @@ class MainPage extends StatelessWidget {
                                 child: SizedBox(
                                   child: SizedBox(
                                     height: 570.h,
-                                    child:  Column(
+                                    child:  const Column(
                                        crossAxisAlignment: CrossAxisAlignment.center,
                                        children: [
                                          // add new category
-                                         const AddCategoryHeaderWidget(),
+                                         AddCategoryHeaderWidget(),
                                          // category list
-                                         const MainPageCategoryListWidget(),
-                                         const SizedBox(height: defaultPadding * 2),
-                                        // product list
-                                        Expanded(child: Container(
-                                          height: double.infinity,
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(defaultRadius),
-                                            color: context.theme.colorScheme.secondary
-                                          ),
-                                        ))
+                                         MainPageCategoryListWidget(),
+                                         SizedBox(height: defaultPadding * 2),
+                                        // new product list
+                                        MainProductListWidget()
                                        ],
                                     ),
                                   ),
