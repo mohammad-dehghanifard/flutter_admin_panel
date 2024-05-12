@@ -20,7 +20,7 @@ class MainPage extends StatelessWidget {
           children: [
             // DashBoard
             const Expanded(child: DrawerWidget()),
-            // main card
+            // new product and new order cards
             Expanded(
               flex: 5,
                 child: Padding(
