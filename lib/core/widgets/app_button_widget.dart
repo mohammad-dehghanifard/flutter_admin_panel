@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_panel/core/resources/constants.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_utils/get_utils.dart';
 
@@ -17,7 +16,7 @@ class AppButtonWidget extends StatelessWidget {
         style: ButtonStyle(
             backgroundColor: MaterialStatePropertyAll(context.theme.colorScheme.primary),
             shape: MaterialStatePropertyAll(
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(defaultRadius))
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.r))
             ),
             minimumSize: MaterialStatePropertyAll(
                 Size(width.w,height.h)
