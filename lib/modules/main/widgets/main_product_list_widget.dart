@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_admin_panel/core/fake_data.dart';
-import 'package:flutter_admin_panel/core/resources/assets_path.dart';
 import 'package:flutter_admin_panel/core/resources/constants.dart';
 import 'package:flutter_admin_panel/core/widgets/app_button_widget.dart';
 import 'package:flutter_admin_panel/modules/main/data/models/product_model.dart';
@@ -37,6 +35,7 @@ class MainProductListWidget extends StatelessWidget {
               )
             ],
           ),
+          SizedBox(height: 12.h),
           Expanded(
               child: ListView.builder(
                 itemCount: FakeData.products.length,
@@ -73,8 +72,10 @@ class MainProductListWidget extends StatelessWidget {
                             TableCell(
                               verticalAlignment: TableCellVerticalAlignment.middle,
                               child: Align(
-                                alignment: Alignment.centerRight,
-                                  child: Image.asset(product.image,height: 48,)),
+                                  alignment: Alignment.centerRight,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(4.r),
+                                      child: Image.asset(product.image,height: 40,))),
                             ),
                             TableCell(
                               verticalAlignment: TableCellVerticalAlignment.middle,

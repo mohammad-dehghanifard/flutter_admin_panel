@@ -42,6 +42,16 @@ class MainPage extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(defaultRadius),
                                       color: context.theme.colorScheme.secondary
                                   ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(defaultPadding),
+                                    child: Column (
+                                      children: [
+                                        Text("آخرین سفارشات",style: context.textTheme.titleMedium),
+                                        SizedBox(height: 8.h),
+                                        
+                                      ],
+                                    ),
+                                  ),
                                 )),
                             const SizedBox(width: defaultPadding),
                             // new products and category
