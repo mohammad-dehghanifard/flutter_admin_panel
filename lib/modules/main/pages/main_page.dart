@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_admin_panel/core/resources/constants.dart';
 import 'package:flutter_admin_panel/modules/main/widgets/add_category_header_widget.dart';
 import 'package:flutter_admin_panel/modules/main/widgets/drawer_widget.dart';
+import 'package:flutter_admin_panel/modules/main/widgets/main_order_list_widget.dart';
 import 'package:flutter_admin_panel/modules/main/widgets/main_page_category_list_widget.dart';
 import 'package:flutter_admin_panel/modules/main/widgets/main_page_header_widget.dart';
 import 'package:flutter_admin_panel/modules/main/widgets/main_product_list_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 
 
 class MainPage extends StatelessWidget {
@@ -34,25 +34,9 @@ class MainPage extends StatelessWidget {
                         Row(
                           children: [
                             // new orders
-                            Expanded(
+                            const Expanded(
                                 flex: 2,
-                                child: Container(
-                                  height: 570.h,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(defaultRadius),
-                                      color: context.theme.colorScheme.secondary
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(defaultPadding),
-                                    child: Column (
-                                      children: [
-                                        Text("آخرین سفارشات",style: context.textTheme.titleMedium),
-                                        SizedBox(height: 8.h),
-                                        
-                                      ],
-                                    ),
-                                  ),
-                                )),
+                                child: OrderListWidget()),
                             const SizedBox(width: defaultPadding),
                             // new products and category
                             Expanded(
@@ -87,6 +71,8 @@ class MainPage extends StatelessWidget {
     );
   }
 }
+
+
 
 
 

@@ -1,5 +1,6 @@
 import 'package:flutter_admin_panel/core/resources/assets_path.dart';
 import 'package:flutter_admin_panel/modules/main/data/models/category_model.dart';
+import 'package:flutter_admin_panel/modules/main/data/models/order_model.dart';
 import 'package:flutter_admin_panel/modules/main/data/models/product_model.dart';
 
 class FakeData {
@@ -63,5 +64,28 @@ class FakeData {
         price: 26000.0,
         count: 29,
         category: categories[2]),
+  ];
+
+  static List<OrderModel> orders = [
+    OrderModel(
+        products: [products[0],products[3]],
+        totalPrice: 124000.0,
+        orderCode: 123456
+    ),
+    OrderModel(
+        products: [products[1],products[2]],
+        totalPrice: 36500.0,
+        orderCode: 113987
+    ),
+    OrderModel(
+        products: [products[5],products[4]],
+        totalPrice: 89000.0,
+        orderCode: 741258
+    ),
+    OrderModel(
+        products: [products[3],products[4]],
+        totalPrice: 465000.0,
+        orderCode: 951357
+    ),
   ];
 }
