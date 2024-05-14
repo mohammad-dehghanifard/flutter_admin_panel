@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_admin_panel/core/fake_data.dart';
 import 'package:flutter_admin_panel/core/resources/constants.dart';
 import 'package:flutter_admin_panel/modules/main/data/models/category_model.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_utils/get_utils.dart';
 
 class MainPageCategoryListWidget extends StatelessWidget {
@@ -19,10 +18,10 @@ class MainPageCategoryListWidget extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            margin: EdgeInsets.only(top: 18.h,left: 4.w),
+            margin: EdgeInsets.only(top: 18,left: 4),
             padding: const EdgeInsets.all(defaultPadding),
-            width: 45.w,
-            height: 160.h,
+            width: 45,
+            height: 160,
             decoration: BoxDecoration(
                 color: context.theme.colorScheme.secondary,
                 borderRadius: BorderRadius.circular(defaultRadius)
@@ -31,7 +30,7 @@ class MainPageCategoryListWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 // category image
-                Image.asset(category.image,height: 78.h),
+                Image.asset(category.image,height: 78),
                 //SizedBox(height: 8.h),
                 // category title
                 Text(category.title,maxLines: 1,overflow: TextOverflow.ellipsis,),

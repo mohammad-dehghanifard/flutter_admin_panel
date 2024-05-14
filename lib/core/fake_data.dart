@@ -68,12 +68,12 @@ class FakeData {
 
   static List<OrderModel> orders = [
     OrderModel(
-        products: [products[0],products[3]],
+        products: [products[0],products[3],products[1],products[4]],
         totalPrice: 124000.0,
         orderCode: 123456
     ),
     OrderModel(
-        products: [products[1],products[2]],
+        products: [products[1],products[2],products[0],products[5],products[3]],
         totalPrice: 36500.0,
         orderCode: 113987
     ),

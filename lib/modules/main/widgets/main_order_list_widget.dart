@@ -1,8 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_admin_panel/core/fake_data.dart';
 import 'package:flutter_admin_panel/core/resources/constants.dart';
 import 'package:flutter_admin_panel/modules/main/data/models/order_model.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class OrderListWidget extends StatelessWidget {
@@ -13,7 +13,7 @@ class OrderListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 570.h,
+      height: 570,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(defaultRadius),
           color: context.theme.colorScheme.secondary
@@ -23,7 +23,7 @@ class OrderListWidget extends StatelessWidget {
         child: Column (
           children: [
             Text("آخرین سفارشات",style: context.textTheme.titleMedium!.apply(color: primaryColor)),
-            SizedBox(height: 8.h),
+            const SizedBox(height: 8),
             Expanded(
                 child: ListView.builder(
                   itemCount: FakeData.orders.length,
@@ -43,7 +43,7 @@ class OrderListWidget extends StatelessWidget {
                           Text("شماره سفارش : ${order.orderCode}"),
                           const SizedBox(height: 8),
                           // product list
-                          Row(
+                          Wrap(
                             children: List.generate(order.products.length, (index) {
                               return Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 4,vertical: 8),

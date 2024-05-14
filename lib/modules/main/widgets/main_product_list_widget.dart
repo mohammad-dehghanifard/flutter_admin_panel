@@ -3,7 +3,6 @@ import 'package:flutter_admin_panel/core/fake_data.dart';
 import 'package:flutter_admin_panel/core/resources/constants.dart';
 import 'package:flutter_admin_panel/core/widgets/app_button_widget.dart';
 import 'package:flutter_admin_panel/modules/main/data/models/product_model.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_utils/get_utils.dart';
 
 class MainProductListWidget extends StatelessWidget {
@@ -29,27 +28,27 @@ class MainProductListWidget extends StatelessWidget {
               const Text("جدیدترین محصولات"),
 
               AppButtonWidget(
-                width: 8.w,
+                width: 8,
                 onTap: () {},
                 title: "افزودن محصول جدید",
               )
             ],
           ),
-          SizedBox(height: 12.h),
+          const SizedBox(height: 12),
           Expanded(
               child: ListView.builder(
                 itemCount: FakeData.products.length,
                 itemBuilder: (context, index) {
                   final ProductModel product = FakeData.products[index];
                   return Container(
-                    margin: EdgeInsets.symmetric(horizontal: defaultPadding, vertical: 4.h),
+                    margin: const EdgeInsets.symmetric(horizontal: defaultPadding, vertical: 4),
                     padding: const EdgeInsets.all(6),
                     width: double.infinity,
                     decoration: BoxDecoration(
                         border: Border.all(
                             color: Colors.blueGrey.withOpacity(0.30)
                         ),
-                        borderRadius: BorderRadius.circular(8.r)
+                        borderRadius: BorderRadius.circular(8)
                     ),
                     child: Table(
                       columnWidths: const {
@@ -74,7 +73,7 @@ class MainProductListWidget extends StatelessWidget {
                               child: Align(
                                   alignment: Alignment.centerRight,
                                   child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(4.r),
+                                    borderRadius: BorderRadius.circular(4),
                                       child: Image.asset(product.image,height: 40,))),
                             ),
                             TableCell(

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 const primaryColor = Color(0xFF2697FF);
 const darkSecondaryColor = Color(0xFF2A2D3E);
 const darkBgColor = Color(0xFF212332);
 
 const defaultPadding = 16.0;
-var defaultRadius = 12.0.r;
+var defaultRadius = 12.0;

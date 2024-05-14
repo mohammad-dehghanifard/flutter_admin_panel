@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_admin_panel/core/resources/constants.dart';
 import 'package:flutter_admin_panel/core/widgets/app_text_fields.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_utils/get_utils.dart';
 
 class MainPageHeader extends StatelessWidget {
@@ -20,21 +19,21 @@ class MainPageHeader extends StatelessWidget {
         const Expanded(
           child: AppTextField(hint: "نام محصول مورد نظر را وارد کنید..."),
         ),
-        SizedBox(width: 4.w),
+        const SizedBox(width: 4),
         // Admin card
         Container(
-          width: 65.w,
-          height: 45.h,
-          padding: EdgeInsets.symmetric(horizontal: 2.w),
+          width: 65,
+          height: 45,
+          padding: EdgeInsets.symmetric(horizontal: 2),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(defaultRadius),
               color: context.theme.colorScheme.secondary
           ),
-          child:  Row(
+          child:  const Row(
             children: [
-              const CircleAvatar(),
-              SizedBox(width: 2.w),
-              const Text("محمد دهقانی فرد",maxLines: 1,overflow: TextOverflow.ellipsis)
+              CircleAvatar(),
+              SizedBox(width: 2),
+              Text("محمد دهقانی فرد",maxLines: 1,overflow: TextOverflow.ellipsis)
             ],
           ),
         )

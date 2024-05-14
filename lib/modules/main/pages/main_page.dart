@@ -6,7 +6,6 @@ import 'package:flutter_admin_panel/modules/main/widgets/main_order_list_widget.
 import 'package:flutter_admin_panel/modules/main/widgets/main_page_category_list_widget.dart';
 import 'package:flutter_admin_panel/modules/main/widgets/main_page_header_widget.dart';
 import 'package:flutter_admin_panel/modules/main/widgets/main_product_list_widget.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 class MainPage extends StatelessWidget {
@@ -14,37 +13,37 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return  const Scaffold(
       body: SafeArea(
         child: Row(
           children: [
             // DashBoard
-            const Expanded(child: DrawerWidget()),
+            Expanded(child: DrawerWidget()),
             // new product and new order cards
             Expanded(
               flex: 5,
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: defaultPadding,vertical: defaultPadding * 2),
+                  padding: EdgeInsets.symmetric(horizontal: defaultPadding,vertical: defaultPadding * 2),
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
                         // Header
-                        const MainPageHeader(),
-                        const SizedBox(height: defaultPadding * 2),
+                        MainPageHeader(),
+                        SizedBox(height: defaultPadding * 2),
                         Row(
                           children: [
                             // new orders
-                            const Expanded(
+                            Expanded(
                                 flex: 2,
                                 child: OrderListWidget()),
-                            const SizedBox(width: defaultPadding),
+                            SizedBox(width: defaultPadding),
                             // new products and category
                             Expanded(
                                 flex: 5,
                                 child: SizedBox(
                                   child: SizedBox(
-                                    height: 570.h,
-                                    child:  const Column(
+                                    height: 570,
+                                    child:  Column(
                                        crossAxisAlignment: CrossAxisAlignment.center,
                                        children: [
                                          // add new category
