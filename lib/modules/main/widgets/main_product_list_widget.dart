@@ -12,6 +12,7 @@ class MainProductListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
     return Expanded(child: Container(
       height: double.infinity,
       padding: const EdgeInsets.all(defaultPadding),
@@ -51,9 +52,9 @@ class MainProductListWidget extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8)
                     ),
                     child: Table(
-                      columnWidths: const {
-                        1 :  FixedColumnWidth(250.0),
-                        2 :  FixedColumnWidth(200.0),
+                      columnWidths:  {
+                        1 :  FixedColumnWidth(size.width * 0.12),
+                        2 :  FixedColumnWidth(size.width * 0.12),
                       },
                       children: [
                         const TableRow(

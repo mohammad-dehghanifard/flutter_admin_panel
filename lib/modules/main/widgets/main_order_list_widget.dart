@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_admin_panel/core/fake_data.dart';
 import 'package:flutter_admin_panel/core/resources/constants.dart';
@@ -12,8 +11,9 @@ class OrderListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
     return Container(
-      height: 570,
+      height: size.height * 0.8,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(defaultRadius),
           color: context.theme.colorScheme.secondary

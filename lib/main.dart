@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       locale: const Locale('fa'),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Admin Panel',
-      theme: ThemeManager.darkTheme,
+      theme: ThemeManager.darkTheme(context),
       home: const MainPage(),
     );
   }

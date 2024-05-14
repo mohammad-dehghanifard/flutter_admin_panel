@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_admin_panel/core/resources/constants.dart';
 import 'package:flutter_admin_panel/core/widgets/app_text_fields.dart';
@@ -10,6 +11,7 @@ class MainPageHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
     return Row(
       children: [
         // title
@@ -19,21 +21,27 @@ class MainPageHeader extends StatelessWidget {
         const Expanded(
           child: AppTextField(hint: "نام محصول مورد نظر را وارد کنید..."),
         ),
-        const SizedBox(width: 4),
+        SizedBox(width: size.width * 0.02),
         // Admin card
         Container(
-          width: 65,
-          height: 45,
-          padding: EdgeInsets.symmetric(horizontal: 2),
+          width: size.width * 0.12,
+          height: size.height * 0.06,
+          padding: const EdgeInsets.symmetric(horizontal: 2),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(defaultRadius),
               color: context.theme.colorScheme.secondary
           ),
-          child:  const Row(
+          child:   Row(
             children: [
-              CircleAvatar(),
-              SizedBox(width: 2),
-              Text("محمد دهقانی فرد",maxLines: 1,overflow: TextOverflow.ellipsis)
+              Container(
+                width: size.width * 0.04,
+                height: size.height * 0.04,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: primaryColor
+                ),
+              ),
+              const Text("محمد دهقانی فرد",maxLines: 1,overflow: TextOverflow.ellipsis)
             ],
           ),
         )
